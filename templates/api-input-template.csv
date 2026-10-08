@@ -1,0 +1,18 @@
+﻿record_type,api_name,enabled,method,url,body,content_type,body_mode,timeout_ms,expected_status,key,value,comment
+API,get-item,true,GET,https://example.com/v1/items,,,,,200,,,サンプルGET。実行前にURLを置き換えてください。
+API,create-item,true,POST,https://example.com/v1/items,"{""name"":""sample"",""count"":1}",application/json,raw,,,,,サンプルPOST(JSON)。
+API,submit-form,true,POST,https://example.com/v1/forms,,,form,,,,,サンプルPOST(フォーム)。
+QUERY,get-item,true,,,,,,,,page,1,
+QUERY,get-item,true,,,,,,,,size,10,
+HEADER,get-item,true,,,,,,,,Accept,application/json,
+HEADER,get-item,true,,,,,,,,X-Request-Id,demo-001,
+HEADER,create-item,true,,,,,,,,Accept,application/json,
+HEADER,submit-form,true,,,,,,,,Accept,application/json,
+BODY,submit-form,true,,,,,,,,title,hello,
+BODY,submit-form,true,,,,,,,,note,world,
+SETTING,,true,,,,,,,,threads,1,初期値は1スレッドです。各APIを1回呼びます。
+SETTING,,true,,,,,,,,loops,1,初期値は1ループです。
+SETTING,,true,,,,,,,,ramp_up_sec,1,
+SETTING,,true,,,,,,,,follow_redirects,true,
+SETTING,,true,,,,,,,,plan_name,REST API Test Plan,
+SETTING,,true,,,,,,,,on_error,continue,continue / stopthread / stoptest / stoptestnow
